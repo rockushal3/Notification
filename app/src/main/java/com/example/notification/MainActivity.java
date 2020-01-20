@@ -23,6 +23,8 @@ public class MainActivity extends AppCompatActivity {
         notification1 = findViewById(R.id.button);
         notification2 = findViewById(R.id.button2);
         notificationManagerCompat = NotificationManagerCompat.from(this);
+        createChannel createChannel = new createChannel(this);
+        createChannel.createChannel();
         notification1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
