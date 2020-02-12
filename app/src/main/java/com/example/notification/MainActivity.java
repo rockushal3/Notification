@@ -8,6 +8,7 @@ import android.app.Notification;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.example.notification.services.createChannel;
 
@@ -29,6 +30,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 notificationchannelone();
+                Toast.makeText(MainActivity.this, "ads", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -51,13 +53,13 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void notificationchanneltwo(){
-        Notification notification = new NotificationCompat.Builder(this, createChannel.Channel_One)
+        Notification notification = new NotificationCompat.Builder(this, createChannel.Channel_Two)
                 .setSmallIcon(R.drawable.ic_launcher_background)
                 .setContentTitle("Dokan")
                 .setContentText("getete")
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)
                 .build();
-        notificationManagerCompat.notify(1,notification);
+        notificationManagerCompat.notify(2,notification);
 
     }
 
